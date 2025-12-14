@@ -1,140 +1,201 @@
-🍬 Sweet Shop Management System
+🍭 Sweet Shop Management System
 
-A full-stack, TypeScript-based inventory management system for a boutique sweet shop. This application features secure role-based authentication, real-time inventory tracking, and a modern, responsive dashboard.
+A full-stack, strictly typed inventory management system for a boutique sweet shop. Featuring secure role-based auth, atomic inventory transactions, and a "warm," mobile-first design.
 
-🚀 Features
+📖 Table of Contents
 
-Core Functionality
-
-User Authentication: Secure Registration and Login using JWT and BCrypt.
-
-Role-Based Access: Distinct capabilities for Users (Browse, Purchase) vs Admins (Manage Inventory).
-
-Inventory Management:
-
-Atomic Transactions: Prevents race conditions when multiple users purchase the same item.
-
-Stock Tracking: Visual indicators for low stock and out-of-stock items.
-
-Search & Filter: Instant search for sweets by name or category.
-
-Tech Stack
-
-Backend: Node.js, Express, TypeScript, Prisma (SQLite), Jest (TDD).
-
-Frontend: React, Vite, Tailwind CSS, Lucide Icons.
-
-Design: Mobile-first, responsive UI with a warm, appetizing color palette.
+✨ Features
 
 📸 Screenshots
 
-User Experience
+🛠️ Tech Stack
 
-Login Page
+🚀 Getting Started
+
+🧪 Testing (TDD)
+
+🤖 AI Usage Disclosure
+
+✨ Features
+
+🔐 Security & Auth
+
+JWT Authentication: Secure stateless session management.
+
+Role-Based Access Control (RBAC): * User: Browse catalog, filter items, add to cart, purchase.
+
+Admin: Full CRUD operations on inventory, view analytics.
+
+📦 Inventory Engine
+
+Atomic Transactions: Uses Prisma transactions to prevent race conditions (e.g., two users buying the last donut simultaneously).
+
+Real-time Tracking: Visual cues for Low Stock (<5 items) and Out of Stock.
+
+Search & Filter: Instant client-side filtering by name, category, and price range.
+
+🎨 User Experience
+
+Responsive Design: Mobile-first approach using Tailwind CSS.
+
+Performance: Vite-powered frontend for instant load times.
+
+Feedback: Toast notifications for success/error states.
+
+📸 Screenshots
+
+Login & Auth
 
 User Dashboard
 
-![Login Page](screenshots/desktop-2-login.png)
+<img src="screenshots/desktop-2-login.png" alt="Login Page" width="400"/>
 
-![User Dashboard](screenshots/desktop-3-dashboard.png)
+<img src="screenshots/desktop-3-dashboard.png" alt="User Dashboard" width="400"/>
 
-
-
-Features
-
-Search & Filter
-
-User Profile
-
-![Search Interface](screenshots/desktop-4-search.png)
-
-![User Profile](screenshots/desktop-5-profile.png)
-
-
-
-Admin & Mobile Responsiveness
+Search Interface
 
 Admin Inventory
 
-Mobile Dashboard
+<img src="screenshots/desktop-4-search.png" alt="Search" width="400"/>
 
-![Admin Panel](screenshots/desktop-6-admin.png)
+<img src="screenshots/desktop-6-admin.png" alt="Admin Panel" width="400"/>
 
-![Mobile View](screenshots/mobile-3-dashboard.png)
+Mobile Responsive View
 
+User Profile
 
+<img src="screenshots/mobile-3-dashboard.png" alt="Mobile View" width="200"/>
 
-🛠️ Setup & Installation
+<img src="screenshots/desktop-5-profile.png" alt="Profile" width="400"/>
+
+🛠️ Tech Stack
+
+Domain
+
+Technologies
+
+Backend
+
+Node.js, Express, TypeScript, BCrypt, JSONWebToken
+
+Database
+
+SQLite (Dev), Prisma ORM
+
+Frontend
+
+React (v18), Vite, Tailwind CSS, Lucide React, Axios
+
+Testing
+
+Jest (Backend Logic), Supertest (API Integration)
+
+DevOps
+
+ESLint, Prettier, Concurrently
+
+🚀 Getting Started
 
 Prerequisites
 
-Node.js (v18 or higher)
+Node.js (v18+)
 
 npm
 
-1. Backend Setup
+1. Clone the Repository
 
-The backend runs on port 3000.
+git clone [https://github.com/yourusername/sweet-shop-system.git](https://github.com/yourusername/sweet-shop-system.git)
+cd sweet-shop-system
+
+
+2. Backend Setup
+
+The backend runs on http://localhost:3000.
 
 cd sweet-shop-backend
+
+# Install dependencies
 npm install
-# Initialize Database
+
+# Create Environment File
+echo "PORT=3000" >> .env
+echo "DATABASE_URL='file:./dev.db'" >> .env
+echo "JWT_SECRET='super-secret-key'" >> .env
+
+# Initialize Database & Run Migrations
 npx prisma migrate dev --name init
-# Optional: Seed Data with demo sweets
+
+# Seed Data (Demo sweets & admin user)
 npx ts-node prisma/seed.ts
+
 # Start Server
 npm run dev
 
 
+3. Frontend Setup
 
-2. Frontend Setup
+The frontend runs on http://localhost:5173.
 
-The frontend runs on port 5173 and proxies API requests to the backend.
-
+# In a new terminal
 cd sweet-shop-frontend
+
+# Install dependencies
 npm install
-# Start UI
+
+# Start Development Server
 npm run dev
 
 
-
-Access the app at: http://localhost:5173
+Note: The frontend is configured to proxy requests to http://localhost:3000 to avoid CORS issues during development.
 
 🧪 Testing & Quality Assurance
 
-The backend follows strictly Test-Driven Development (TDD).
+This project strictly follows Test-Driven Development (TDD) principles. Tests were written before the implementation code.
 
-Running Tests
-
-To run the full suite:
+Running the Test Suite
 
 cd sweet-shop-backend
 npm test
 
 
+Current Status: 🟢 15/15 Passing
 
-Current Status: 🟢 15/15 Tests Passing (Auth, Inventory, Logic).
-See test_report.txt for the detailed output.
+✅ Auth Middleware (Token validation)
 
-🤖 My AI Usage
+✅ Inventory Logic (Atomic decrements)
+
+✅ Route Integration
+
+🤖 AI Usage Disclosure
 
 In compliance with the assignment's AI Policy, I transparently document my collaboration with AI tools below.
 
-Tools Used
+🛠️ Tools Used
 
 GitHub Copilot / Gemini: Used as a pair programmer for boilerplate generation, refactoring, and debugging.
 
 Playwright: Used to automate the capture of high-quality screenshots for documentation.
 
-Specific Applications
+📝 Specific Implementation Details
 
-TDD Workflow: I used AI to generate the "Red" (failing) test cases based on the requirements before writing the implementation logic. This ensured I adhered to strict TDD without getting bogged down in Jest syntax.
+Area
 
-Design System: I leveraged AI to generate the Tailwind CSS configuration and color palette (orange-500, stone-50) to create a cohesive "Warm" theme quickly.
+Usage Description
 
-Debugging: AI assisted in resolving a specific version mismatch with Tailwind v4, suggesting a downgrade to v3 stable.
+TDD Workflow
 
-Reflection
+I used AI to generate the "Red" (failing) test cases based on my requirements before writing the implementation. This ensured I adhered to strict TDD without getting bogged down in Jest syntax.
 
-AI significantly accelerated the setup phase (scaffolding the Monorepo structure) and the styling phase. However, the core business logic—specifically the atomic decrement for inventory and the permission middleware—was verified manually to ensure correctness and security.
+Design System
 
+AI generated the initial Tailwind tailwind.config.js theme extension (colors: orange-500, stone-50) to ensure a cohesive "Warm" palette.
+
+Debugging
+
+AI helped resolve a specific version mismatch with Tailwind v4, suggesting a downgrade to v3 stable for better compatibility with existing plugins.
+
+🧠 Reflection
+
+AI significantly accelerated the setup phase (scaffolding the Monorepo) and styling. However, core business logic—specifically the atomic decrement for inventory and permission middleware—was written and verified manually to ensure security and correctness.
+
+<p align="center">Made with 🍭 and TypeScript</p>
