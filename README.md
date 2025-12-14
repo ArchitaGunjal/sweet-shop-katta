@@ -1,201 +1,240 @@
-🍭 Sweet Shop Management System
+````md
+<div align="center">
 
-A full-stack, strictly typed inventory management system for a boutique sweet shop. Featuring secure role-based auth, atomic inventory transactions, and a "warm," mobile-first design.
+# 🍭 Sweet Shop Management System
 
-📖 Table of Contents
+**AI Kata Project Submission — TDD-Driven Full-Stack Inventory System**
 
-✨ Features
+A **strictly typed**, **test-driven**, and **secure** sweet shop inventory management platform showcasing modern backend engineering, clean frontend design, and **transparent AI-assisted development**.
 
-📸 Screenshots
+---
 
-🛠️ Tech Stack
+🎯 **About** • ✨ **Features** • 📸 **Gallery** • 🛠️ **Tech Stack** • 🚀 **Setup** • 🧪 **TDD** • 🤖 **AI Disclosure**
 
-🚀 Getting Started
+<br />
 
-🧪 Testing (TDD)
+<img src="https://img.shields.io/badge/TypeScript-Strict-blue?style=flat-square" />
+<img src="https://img.shields.io/badge/TDD-Red–Green–Refactor-success?style=flat-square" />
+<img src="https://img.shields.io/badge/Auth-JWT-orange?style=flat-square" />
+<img src="https://img.shields.io/badge/ORM-Prisma-lightgrey?style=flat-square" />
+<img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blueviolet?style=flat-square" />
 
-🤖 AI Usage Disclosure
+</div>
 
-✨ Features
+---
 
-🔐 Security & Auth
+## 🎯 About the Kata
 
-JWT Authentication: Secure stateless session management.
+This project was built as part of the **"TDD Kata: Sweet Shop Management System"** assignment.
 
-Role-Based Access Control (RBAC): * User: Browse catalog, filter items, add to cart, purchase.
+The goal was to design and implement a **robust full-stack application** while strictly adhering to:
 
-Admin: Full CRUD operations on inventory, view analytics.
+- **Test-Driven Development (TDD)**
+- **Secure RESTful API principles**
+- **Role-based authorization**
+- **Transparent AI usage & documentation**
 
-📦 Inventory Engine
+---
 
-Atomic Transactions: Uses Prisma transactions to prevent race conditions (e.g., two users buying the last donut simultaneously).
+## ✅ Deliverables Checklist
 
-Real-time Tracking: Visual cues for Low Stock (<5 items) and Out of Stock.
+| Requirement       | Status | Implementation Details |
+|------------------|--------|------------------------|
+| Backend API       | ✅ | Node.js + Express REST API, JWT Auth, Prisma (SQLite) |
+| Frontend SPA      | ✅ | React (Vite) with Mobile-First Tailwind UI |
+| TDD Workflow      | ✅ | Red → Green → Refactor methodology |
+| AI Transparency   | ✅ | Full disclosure & co-authorship tracking |
 
-Search & Filter: Instant client-side filtering by name, category, and price range.
+---
 
-🎨 User Experience
+## ✨ Key Features
 
-Responsive Design: Mobile-first approach using Tailwind CSS.
+### 🔐 Security & Role-Based Access
 
-Performance: Vite-powered frontend for instant load times.
+- **JWT Authentication**  
+  Stateless and secure login / registration system.
 
-Feedback: Toast notifications for success/error states.
+- **Granular Permissions**
+  - **Shoppers**: Browse sweets, filter by category/price, purchase items
+  - **Admins**: Add products, restock inventory, delete items
 
-📸 Screenshots
+---
 
-Login & Auth
+### 📦 Inventory Engine
 
-User Dashboard
+- **Atomic Transactions**  
+  Prevents race conditions (e.g., concurrent purchases of the last item) using **Prisma transactions**.
 
-<img src="screenshots/desktop-2-login.png" alt="Login Page" width="400"/>
+- **Smart Search**  
+  Real-time filtering by:
+  - Name
+  - Category
+  - Price range
 
-<img src="screenshots/desktop-3-dashboard.png" alt="User Dashboard" width="400"/>
+- **Stock Indicators**
+  - 🟡 Low Stock (< 5)
+  - 🔴 Out of Stock
 
-Search Interface
+---
 
-Admin Inventory
+### 🎨 Modern User Experience
 
-<img src="screenshots/desktop-4-search.png" alt="Search" width="400"/>
+- **Mobile-First Design**  
+  Fully responsive UI built with **Tailwind CSS**.
 
-<img src="screenshots/desktop-6-admin.png" alt="Admin Panel" width="400"/>
+- **Instant Feedback**  
+  Toast notifications for purchases, stock errors, and admin actions.
 
-Mobile Responsive View
+- **Optimized Performance**  
+  Vite-powered frontend with sub-second load times.
 
-User Profile
+---
 
-<img src="screenshots/mobile-3-dashboard.png" alt="Mobile View" width="200"/>
+## 📸 Application Gallery
 
-<img src="screenshots/desktop-5-profile.png" alt="Profile" width="400"/>
+<div align="center">
 
-🛠️ Tech Stack
+### 🔑 Authentication & Dashboard
+<img src="screenshots/desktop-2-login.png" width="400" alt="Login Page" />
+<img src="screenshots/desktop-3-dashboard.png" width="400" alt="User Dashboard" />
 
-Domain
+<br />
 
-Technologies
+### 🔍 Search & Admin Inventory
+<img src="screenshots/desktop-4-search.png" width="400" alt="Search Interface" />
+<img src="screenshots/desktop-6-admin.png" width="400" alt="Admin Panel" />
 
-Backend
+<br />
 
-Node.js, Express, TypeScript, BCrypt, JSONWebToken
+### 📱 Mobile & Profile Views
+<img src="screenshots/mobile-3-dashboard.png" width="200" alt="Mobile View" />
+<img src="screenshots/desktop-5-profile.png" width="400" alt="User Profile" />
 
-Database
+</div>
 
-SQLite (Dev), Prisma ORM
+---
 
-Frontend
+## 🛠️ Tech Stack
 
-React (v18), Vite, Tailwind CSS, Lucide React, Axios
+| Domain      | Technologies |
+|------------|-------------|
+| **Backend** | Node.js, Express, TypeScript, BCrypt, JSON Web Token |
+| **Database** | SQLite (Dev), Prisma ORM |
+| **Frontend** | React 18, Vite, Tailwind CSS, Lucide React, Axios |
+| **Testing** | Jest (Logic), Supertest (API Integration) |
+| **DevOps** | ESLint, Prettier, Concurrently |
 
-Testing
+---
 
-Jest (Backend Logic), Supertest (API Integration)
+## 🚀 Setup & Installation
 
-DevOps
+### 🔧 Prerequisites
 
-ESLint, Prettier, Concurrently
+- Node.js **v18+**
+- npm
 
-🚀 Getting Started
+---
 
-Prerequisites
+### 1️⃣ Clone the Repository
 
-Node.js (v18+)
-
-npm
-
-1. Clone the Repository
-
-git clone [https://github.com/yourusername/sweet-shop-system.git](https://github.com/yourusername/sweet-shop-system.git)
+```bash
+git clone https://github.com/yourusername/sweet-shop-system.git
 cd sweet-shop-system
+````
 
+---
 
-2. Backend Setup
+### 2️⃣ Backend Setup
 
-The backend runs on http://localhost:3000.
+Backend runs on **[http://localhost:3000](http://localhost:3000)**
 
+```bash
 cd sweet-shop-backend
 
-# Install dependencies
 npm install
 
-# Create Environment File
+# Environment variables
 echo "PORT=3000" >> .env
 echo "DATABASE_URL='file:./dev.db'" >> .env
 echo "JWT_SECRET='super-secret-key'" >> .env
 
-# Initialize Database & Run Migrations
+# Migrate database
 npx prisma migrate dev --name init
 
-# Seed Data (Demo sweets & admin user)
+# Seed demo data
 npx ts-node prisma/seed.ts
 
-# Start Server
+# Start server
 npm run dev
+```
 
+---
 
-3. Frontend Setup
+### 3️⃣ Frontend Setup
 
-The frontend runs on http://localhost:5173.
+Frontend runs on **[http://localhost:5173](http://localhost:5173)**
 
-# In a new terminal
+```bash
 cd sweet-shop-frontend
 
-# Install dependencies
 npm install
-
-# Start Development Server
 npm run dev
+```
 
+> ℹ️ The frontend proxies API requests to `http://localhost:3000` to avoid CORS issues.
 
-Note: The frontend is configured to proxy requests to http://localhost:3000 to avoid CORS issues during development.
+---
 
-🧪 Testing & Quality Assurance
+## 🧪 Test-Driven Development (TDD)
 
-This project strictly follows Test-Driven Development (TDD) principles. Tests were written before the implementation code.
+This project strictly follows **TDD**, with tests written **before** implementation code.
 
-Running the Test Suite
+### ▶ Run Test Suite
 
+```bash
 cd sweet-shop-backend
 npm test
+```
 
+**Current Status:** 🟢 **15 / 15 Tests Passing**
 
-Current Status: 🟢 15/15 Passing
+✔ JWT authentication & role middleware
+✔ Inventory atomic decrement logic
+✔ Full REST API integration flows
 
-✅ Auth Middleware (Token validation)
+---
 
-✅ Inventory Logic (Atomic decrements)
+## 🤖 AI Usage Disclosure
 
-✅ Route Integration
+This project complies fully with the **AI Usage Policy** by documenting how AI tools were used.
 
-🤖 AI Usage Disclosure
+### 🛠️ Tools Used
 
-In compliance with the assignment's AI Policy, I transparently document my collaboration with AI tools below.
+* **GitHub Copilot / Gemini**
+  Used as a *pair programmer* for boilerplate generation and debugging.
 
-🛠️ Tools Used
+* **Playwright**
+  Automated screenshot generation for documentation.
 
-GitHub Copilot / Gemini: Used as a pair programmer for boilerplate generation, refactoring, and debugging.
+---
 
-Playwright: Used to automate the capture of high-quality screenshots for documentation.
+### 📝 AI Contribution Log
 
-📝 Specific Implementation Details
+| Area          | Usage Description                                      | Impact       |
+| ------------- | ------------------------------------------------------ | ------------ |
+| TDD Workflow  | Generated failing (“Red”) test cases from requirements | **High**     |
+| Design System | Generated Tailwind theme (warm palette)                | Medium       |
+| Debugging     | Identified Tailwind v3/v4 mismatch                     | **High**     |
+| Git History   | Co-authored commits tagged where applicable            | Transparency |
 
-Area
+**Reflection:**
+AI significantly accelerated scaffolding and setup. However, **core business logic**—especially inventory race-condition handling and permission middleware—was **manually verified** to ensure correctness and security.
 
-Usage Description
+---
 
-TDD Workflow
+<div align="center">
 
-I used AI to generate the "Red" (failing) test cases based on my requirements before writing the implementation. This ensured I adhered to strict TDD without getting bogged down in Jest syntax.
+### Made with 🍭, TypeScript, and disciplined TDD
 
-Design System
-
-AI generated the initial Tailwind tailwind.config.js theme extension (colors: orange-500, stone-50) to ensure a cohesive "Warm" palette.
-
-Debugging
-
-AI helped resolve a specific version mismatch with Tailwind v4, suggesting a downgrade to v3 stable for better compatibility with existing plugins.
-
-🧠 Reflection
-
-AI significantly accelerated the setup phase (scaffolding the Monorepo) and styling. However, core business logic—specifically the atomic decrement for inventory and permission middleware—was written and verified manually to ensure security and correctness.
-
-<p align="center">Made with 🍭 and TypeScript</p>
+</div>
+```
