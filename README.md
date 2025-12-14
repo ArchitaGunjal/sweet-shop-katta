@@ -1,4 +1,3 @@
-````md
 <div align="center">
 
 # 🍭 Sweet Shop Management System
@@ -133,16 +132,12 @@ The goal was to design and implement a **robust full-stack application** while s
 - Node.js **v18+**
 - npm
 
----
-
 ### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/sweet-shop-system.git
 cd sweet-shop-system
 ````
-
----
 
 ### 2️⃣ Backend Setup
 
