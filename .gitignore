@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Environment variables (Sensitive data)
+.env
+.env.local
+.env.*.local
+
+# Builds
+dist/
+build/
+
+# Database (SQLite files should generally not be committed, but for this specific Kata submission, 
+# you might want to keep the schema.prisma. DO NOT commit the binary .db file usually, 
+# but if you want the reviewer to see data immediately, you *can* commit it. 
+# Standard practice is to ignore it, so we will ignore it here.)
+*.sqlite
+*.sqlite-journal
+*.db
+*.db-journal
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+
+# Editor directories
+.vscode/
+.idea/

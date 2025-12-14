@@ -1,0 +1,29 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  role     String  @default("user") // "admin" or "user"
+  createdAt DateTime @default(now())
+}
+
+model Sweet {
+  id        Int      @id @default(autoincrement())
+  name      String
+  category  String
+  price     Float
+  quantity  Int
+  image     String?  @default("🍬")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
